@@ -43,6 +43,7 @@ top=top-1;
 }
 }
 
+//function to reverse the desired string
 void reverse()
 {
 int i;
@@ -58,7 +59,7 @@ char Top()
 return A[top];
 }
 
-//function function to print the elements of stack
+//function function to print the string in reverse order
 void reverseprint()
 {
 int i;
