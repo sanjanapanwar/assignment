@@ -81,7 +81,6 @@ temp=temp->next;
 }
 }
 
-//main function
 int main()
 {
 printf("Linked list is:");
