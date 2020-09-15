@@ -48,7 +48,7 @@ push1(ch);
 }
 else if(ch==')')
 {
-if(stack1[top1]='(')
+if(stack1[top1]=='(')
 {
 pop();
 }
