@@ -35,7 +35,7 @@ return stack1[top1];
 }
 
 
-void check_balanced_paranthesis(char exp[],int n)
+int check_balanced_paranthesis(char exp[],int n)
 {
 int i;
 char ch,x;
@@ -48,9 +48,13 @@ push1(ch);
 }
 else if(ch==')')
 {
-if(stack1[top1]='(')
+if(stack1[top1]=='(')
 {
 pop();
+}
+else
+{
+return 0;
 }
 }
 else if(ch=='}')
@@ -59,6 +63,10 @@ if(stack1[top1]=='{')
 {
 pop();
 }
+else
+{
+return 0;
+}
 }
 else if(ch==']')
 {
@@ -66,22 +74,35 @@ if(stack1[top1]=='[')
 {
 pop();
 }
+else
+{
+return 0;
+}
 }
 }
 if(top1==-1)
 {
-printf("Balanced paranthesis\n");
+return 1;
 }
 else{
-printf("Not Balanced paranthesis\n");
+return 0;
 }
 }
 
 int main()
 {
-char infix[]={'{','(','A','+','B','+','(','C','+','D',')','}','\0'};
+int p;
+char infix[]={'{','(','(','[',']',')','[',']',')','[',']','}','\0'};
 int i,n;
 n=sizeof(infix);
-check_balanced_paranthesis(infix,n);
+p=check_balanced_paranthesis(infix,n);
+if(p==1)
+{
+printf("Blanced paranthesis");
+}
+else
+{
+printf("Not Balanced paranthesis");
+}
 
 }
